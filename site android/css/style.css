@@ -108,6 +108,19 @@ iframe{
     display: block;
     margin: auto;
 }
+article{
+    background-color: var(--cor2);
+    border-radius: 10px;
+}
+.escuro {
+    background-color: #448f64;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-inline: 5px;
+}
+li{
+    padding: 5px;
+}
 footer{
     background-color: var(--cor5);
     color: white;
