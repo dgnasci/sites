@@ -103,6 +103,12 @@ main a{
     text-decoration: none;
     color: #2fa866;
 }
+.video{
+    width: 100%;
+    background-color: #063d1e;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
 iframe{
     width: 80%;
     display: block;
