@@ -1,0 +1,16 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to top , white,lightblue);
+    min-height: 100vh;
+}
+main{
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    border-radius: 15px;
+    padding-inline: 15px;
+}
