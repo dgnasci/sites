@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eleitoral</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form action="teste.php" method="get">
+            <label for="pres">Presidente:</label>
+            <input type="number" name="pres" id="pres">
+            <br>
+            <input type="number" name="gov" id="gov">
+            <label for="gov">Governador:</label>
+        </form>
+        <button onclick="return urna(1)">nulo\branco</button>
+        <button onclick="return urna(2)">confirmar</button>
+        <button onclick="return urna(3)">verificar</button>   
+        <section>
+            <h1>presidentes</h1>
+            <ul>
+                <li>Ciro Gomes - 12</li>
+                <li>Jair Bolsonaro - 22</li>
+                <li>Lula - 13</li>
+                <li>Vera Lúcia - 16</li>
+                <li>Soraya Thronicke - 44</li>
+                <li>Eymael - 27</li>
+                <li>Leonardo Péricles - 80</li>
+                <li>Simone Tebet - 15</li>
+                <li>Sofia Manzano - 21</li>
+                <li>Luiz Felipe - 30</li>
+            </ul>
+            <h1>governadores</h1>
+            <ul>
+                <li>Cláudio Castro - 22</li>
+                <li>Cyro Garcia - 16</li>
+                <li>Eduardo Serra - 21</li>
+                <li>Juliete Panjota - 80</li>
+                <li>Luis Eugenio - 29</li>
+                <li>Marcelo Freixo - 40</li>
+                <li>Paulo Ganime - 30</li>
+                <li>Rodrigo Neves - 12</li>
+                <li>Wilson Witzel - 35</li>
+            </ul>
+        </section>
+    </main> 
+    <script src="java.js"></script>
+</body>
+</html>

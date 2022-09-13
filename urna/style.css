@@ -1,0 +1,19 @@
+body{
+    background-image : url("O resto é resto/Palacio_do_planalto_fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main{
+    background-image : url("O resto é resto/Urna_Eletronica.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+section{
+    width : 30%;
+    background-color: grey;
+     border-radius:15px ;
+}
