@@ -11,14 +11,15 @@
     <main>
         <form action="teste.php" method="get">
             <label for="pres">Presidente:</label>
-            <input type="number" name="pres" id="pres">
+            <input class="aument" type="number" name="pres" id="pres">
             <br>
-            <input type="number" name="gov" id="gov">
+            <input class="aument" type="number" name="gov" id="gov">
             <label for="gov">Governador:</label>
         </form>
-        <button onclick="return urna(1)">nulo\branco</button>
-        <button onclick="return urna(2)">confirmar</button>
-        <button onclick="return urna(3)">verificar</button>   
+        <button class="but1" onclick="return urna(1)">nulo\branco</button>
+        <button class="but2" onclick="return urna(2)">confirmar</button>
+        <button class="but3" onclick="return urna(3)">verificar presidentes</button>  
+        <button class="but4" onclick="return urna(4)">verificar governadores</button> 
         <section>
             <h1>presidentes</h1>
             <ul>
