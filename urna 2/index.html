@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <main>
+        <div id="mitoo"><img src="imagens/Jair Bolsonaro PL 22.jpg" alt=""></div>
+        <div id="fazl"><img src="imagens/Lula PT 13.jpg" alt=""></div>
+        <img src="imagens/Urna_Eletronica.jpeg" alt="" class="urna">
+        <form action="teste.php" method="get">
+            <input type="number" name="vote" id="vote" class="vote" >
+        </form>
+        <button class="bu" onclick="urna(1)">branco</button>
+        <button class="but" onclick="urna(2)">confirmar</button>
+        <button class="butt" onclick="urna(3)">verificar candidato</button>
+        <button onclick="urna(4)">verificar resultado</button>
+    </main>
+    <script>
+        let nulo = 0
+        let votos = 0
+        let lula = 0
+        let mito = 0
+        mitoo.style.display = 'none'
+        fazl.style.display = 'none'
+        
+        function urna(f){
+
+            if(f == 1){
+                nulo++
+                votos++
+                alert("Seu voto foi computado")
+            }
+            else if(f == 2){
+                let votacao = vote.value
+                if(votacao == 13){
+                lula++
+                votos++
+                alert("Seu voto foi computado")
+                }
+                else if(votacao == 22){
+                    mito++
+                    votos++
+                    alert("Seu voto foi computado")
+                }
+            }
+            else if(f == 3){
+                let votacao = vote.value
+                if(votacao == 13){
+                    fazl.style.display = 'block'
+                }
+                else if(votacao == 22){
+                    mitoo.style.display = 'block'
+                }
+            }
+            else if(f == 4){
+                alert(`
+                Lula teve ${lula} votos
+                Jair Bolsonaro teve ${mito} votos
+                Tiveram ${nulo} votos nulos
+                Foram computados ${votos} votos`)
+                }
+            
+        }
+    </script>
+</body>
+</html>

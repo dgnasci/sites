@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    text-align: center;
+    background-color: aqua;
+    min-height: 100vh;
+  }
+  
+  main {
+    display: inline-block;
+    margin-top: 2%;
+    padding: 15px;
+    position: relative;
+    width: 90vw;
+  }
+  
+  .urna {
+    width: 100%;
+    max-width: 1200px;
+  }
+  img{
+    width: 200px;
+  }
+  div{
+    width: 20%;
+    position: absolute;
+  }
+  form{
+    position: absolute;
+    right: 25%;
+    bottom: 40%;
+    width: 80%;
+    height: 10%;
+  }
+  .vote{
+    width: 50%;
+    height: 60%;
+  }
+  .bu{
+    height: 6%;
+    width: 7%;
+    position: absolute;
+    right: 30%;
+    bottom: 22%;
+  }
+  .but{
+    background-color: green;
+    border: 0px;
+    height: 8%;
+    width: 7%;
+    position: absolute;
+    right: 13%;
+    bottom: 22%;
+  }
+  .butt{
+    background-color: yellow;
+    border: 0px;
+    height: 7%;
+    width: 7%;
+    position: absolute;
+    right: 21%;
+    bottom: 22%;
+  }
+  #mitoo{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+  }
+  #fazl{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+  }
+  
+  
