@@ -29,7 +29,7 @@ main{
     padding: 15px;
     border-radius: 10px;
     background-color: white;
-    width: 40%;
+    width: 90%;
     margin: auto;
     margin-top: 5%;
     /*background-color:var(--c02);
@@ -60,7 +60,7 @@ a{
 
 img{
     border-radius: 50%;
-    width: 25%;
+    width: 50%;
     display: block;
     margin: auto;
 }
