@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    background-color: rgb(246, 255, 115);
+}
+header{
+    height: 50px;
+}
+body{
+    background-color: antiquewhite;
+}
+main{
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+    line-height: 1.2em;
+    border-radius: 15px;
+}
+img{
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
