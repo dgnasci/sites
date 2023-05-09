@@ -1,0 +1,179 @@
+@charset "UTF-8";
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+:root {
+    --c1: #fff;
+    --c2: #000;
+    --c3: rgb(3, 37, 49);
+    --c4: rgb(0, 164, 192);
+    --c5: rgb(30, 76, 89);
+
+    --f1: Arial, sans-serif;
+    --f2: 'Poppins', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(150deg, var(--c3), var(--c4));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+header {
+    padding: 45px;
+    font-family: var(--f2);
+    color: var(--c1);
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--c1);
+    font-size: 1.2em;
+    transition: .3s;
+}
+
+header ul li a:hover {
+    color: var(--c4);
+}
+
+header h1 {
+    font-size: 3.8em;
+    cursor: default;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px;
+}
+
+main section {
+    width: 600px;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section .media {
+    margin-right: 20px;
+}
+
+main section .media a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--c4);
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--c3);
+    margin-bottom: 10px;
+    transition: .3s;
+}
+
+
+main section .media a:hover {
+    color: var(--c4);
+    border: 2px solid var(--c3);
+    transform: translateY(7px);
+}
+
+main section h2 {
+    font-family: var(--f2);
+    color: var(--c4);
+    font-size: 3.5em;
+}
+
+main section h2#diferentao {
+    font-size: 3.2em;
+}
+
+main section p {
+    font-family: var(--f1);
+    font-size: 1.1em;
+    line-height: 1.2em;
+    padding-bottom: 15px;
+    color: var(--c1);
+}
+
+main section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section form input {
+    width: 600px;
+    height: 60px;
+    border-radius: 15px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+main section form input.button {
+    background-color: var(--c4);
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    color: var(--c1);
+    transition: .3s;
+}
+
+main section form input.button:hover {
+    background-color: var(--c5);
+    cursor: pointer;
+}
+
+figure {
+    padding: 20px;
+    background: linear-gradient(170deg, var(--c5), var(--c3));
+    border-radius: 50%;
+    animation: giro 4s ease-in-out infinite;
+}
+
+@keyframes giro {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+figure img {
+    border-radius: 50%;
+}
