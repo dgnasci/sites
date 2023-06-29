@@ -1,93 +1,17 @@
-<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title> Greensock</title>
-		<meta name="description" content="">
-		<meta name"viewport" content="width=device-width, initial-scale=1">
-		<script src"js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css">
 
-	</head>
-	<body>
-        <style>
-            
-
-.papyrus{
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	left: 250px;
-	color: black;
-}
-
-.undertale{
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	left: 0;
-}
-
-.sans {
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	left: 500px;
-}
-
-button {
-  padding:10px;
-  margin:0 10px;
-  width:120px;
-  cursor:pointer;
-color: white;
-  background-color: black;
-}
-
-.nav {
-  width:600px;
-  margin: 0 1100px; 
-}
-        </style>
-			<img class="undertale" src="http://www.grid-paint.com/images/png/5192630510026752.png"/>
-		<img class="sans" src="http://grid-paint.com/images/png/4700333573931008.png"/>
-		<img class="papyrus" src="http://www.grid-paint.com/images/png/5753133842038784.png"/>
-		<script>
-            var tl = new TimelineLite();
-pauseBtn = document.getElementById("pause"),
-restartBtn = document.getElementById("restart")
-
-tl.from(".undertale",1, {rotation:360, x: 250,},0)
-
-.from(".sans",1,{rotation: 360, x: -250,},0)
-
-.from(".papyrus",1,{rotation: 360,},0)
-
-.to(".undertale",0.5,{y: 200,ease: Back.easeOut.config(1.7)})
-
-.to(".papyrus",0.5,{y: 200,ease: Back.easeOut.config(1.7)})
-
-.to(".sans",0.5,{y: 200,ease: Back.easeOut.config(1.7)})
-
-.to(".undertale",0.5,{x: 250,opacity: 0,ease: Power4.easeOut,})
-
-.to(".sans",0.5,{x: -250,opacity: 0,ease: Power4.easeOut,},"-=0.5")
-
-.to(".papyrus",1,{scale: 2,ease: SteppedEase.config(12)},"-=0.25")
-
-
-pause.onclick = function() {
-  tl.paused(!tl.paused());
-  pauseBtn.innerHTML = tl.paused() ? "play" : "pause";
-}
-
-restartBtn.onclick = function() {
-  tl.restart();
-}
-
-        </script>
-		 <div class="nav">
-  <button id="pause">pause</button>
- <button id="restart">restart</button>
-</div>
-	</body>
+<html>
+    <head>
+        <!--HTML file auto generated using EmulatorJS codehelper-->
+    </head>
+    <body>
+        <div style="width:640px;height:480px;max-width:100%">
+            <div id="game"></div>
+          </div>
+    <script type="text/javascript">
+        EJS_player = '#game';
+        EJS_gameUrl = 'MK4.z64';
+        EJS_core = 'n64';
+    </script>
+    <script src="https://www.emulatorjs.com/loader.js"></script>
+    </body>
+</html>
