@@ -26,7 +26,8 @@ header{
     margin-bottom: 50px;
 }
 .add{
-float: right;
-width: 400px;
-border: 1px solid rgba(155, 69, 155, 0.432);
+    margin-top: 20px;
+    float: right;
+    width: 400px;
+    border: 1px solid rgba(155, 69, 155, 0.432);
 }
