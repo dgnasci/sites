@@ -25,8 +25,21 @@ header{
     height: 60px;
     margin-bottom: 50px;
 }
-.add{
+.left{
     margin-top: 20px;
+    margin-right: 80px;
+    display: block;
+    float: right;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.add{
+    position: fixed;
+    right: 0;
+    bottom: 0;
     float: right;
     width: 400px;
     border: 1px solid rgba(155, 69, 155, 0.432);
