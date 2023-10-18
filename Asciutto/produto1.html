@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -52,7 +51,7 @@
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="formaPagamento" id="boleto" value="boleto">
-                        <label class="form-check-label" for="boleto">
+                        <label class="form-check-label" for "boleto">
                             Boleto Bancário
                         </label>
                     </div>
@@ -103,7 +102,7 @@
                 <div class="col-md-6">
                     <h4>Contato</h4>
                     <p>
-                        <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/seu_instagram" class="text-white">Instagram</a><br>
+                        <i class="bi bi-instagram"></i> Seu Instagram<br>
                         <i class="bi bi-envelope"></i> seu_email@example.com<br>
                         <i class="bi bi-facebook"></i> Facebook: Sua Página<br>
                         <i class="bi bi-whatsapp"></i> WhatsApp: (12) 3456-7890<br>
@@ -119,44 +118,9 @@
         </div>
     </footer>
 
-
-   
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-    // JavaScript para finalizar a compra, calcular frete, e alternar entre formas de pagamento
-    document.getElementById("calcularFreteBtn").addEventListener("click", function () {
-        // Simulação do cálculo de frete (valores fictícios)
-        const frete = 10.0;
-        const valorTotal = 49.99 + frete;
-        document.getElementById("valor-total-modal").textContent = "Total: R$ " + valorTotal.toFixed(2);
-        document.getElementById("opcoes-pagamento").style.display = "block";
-    });
-
-    document.querySelectorAll('input[name="formaPagamento"]').forEach(function (radio) {
-        radio.addEventListener("change", function () {
-            const formaPagamento = this.value;
-            document.getElementById("cartao-campos").style.display = formaPagamento === "cartao" ? "block" : "none";
-            document.getElementById("boleto-qrcode-botoes").style.display = (formaPagamento === "boleto" || formaPagamento === "qrcode") ? "block" : "none";
-        });
-    });
-
-    document.getElementById("gerarBoletoBtn").addEventListener("click", function () {
-        alert("Boleto gerado com sucesso! Redirecionando para a página do boleto.");
-        // Redirecionar para a página do boleto
-    });
-
-    document.getElementById("gerarQRCodeBtn").addEventListener("click", function () {
-        alert("QR Code gerado com sucesso!");
-        // Lógica para exibir a imagem do QR Code
-    });
-
-    document.getElementById("finalizarCompraBtn").addEventListener("click", function () {
-        alert("Compra finalizada com sucesso!");
-        window.location.href = "index.html";
-    });
-</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
