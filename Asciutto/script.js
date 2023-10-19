@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Exibe o boleto
         const boletoImage = document.getElementById("boletoImage");
-        boletoImage.src = "link_para_boleto.png"; // Substitua pelo URL da imagem do boleto
+        boletoImage.src = "boleto.jpg"; // Substitua pelo URL da imagem do boleto
         boletoImage.style.display = "block";
         alert("Boleto gerado com sucesso!");
     });
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Exibe o QR Code
         const qrcodeImage = document.getElementById("qrcodeImage");
-        qrcodeImage.src = "link_para_qrcode.png"; // Substitua pelo URL da imagem do QR Code
+        qrcodeImage.src = "qrcode.jpg"; // Substitua pelo URL da imagem do QR Code
         qrcodeImage.style.display = "block";
         alert("QR Code gerado com sucesso!");
     });
