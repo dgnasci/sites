@@ -43,47 +43,47 @@
                 </div>
                 <div class="modal-body">
                     <p>Selecione a forma de pagamento:</p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="formaPagamento" id="cartao" value="cartao">
-                        <label class="form-check-label" for="cartao">
-                            Cartão de Crédito
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="formaPagamento" id="boleto" value="boleto">
-                        <label class="form-check-label" for "boleto">
-                            Boleto Bancário
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="formaPagamento" id="qrcode" value="qrcode">
-                        <label class="form-check-label" for="qrcode">
-                            Pagamento via QR Code
-                        </label>
-                    </div>
-                    <div id="cartao-campos" style="display: none;">
-                        <p>Preencha os detalhes do cartão:</p>
-                        <div class="form-group">
-                            <label for="nomeTitular">Nome do Titular:</label>
-                            <input type="text" class="form-control" id="nomeTitular">
+                    <ul class="nav nav-tabs" id="formasPagamento" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="cartao-tab" data-toggle="tab" href="#cartao" role="tab" aria-controls="cartao" aria-selected="true">Cartão de Crédito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="boleto-tab" data-toggle="tab" href="#boleto" role "tab" aria-controls="boleto" aria-selected="false">Boleto Bancário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="qrcode-tab" data-toggle="tab" href="#qrcode" role="tab" aria-controls="qrcode" aria-selected="false">Pagamento via QR Code</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="formasPagamentoContent">
+                        <div class="tab-pane fade show active" id="cartao" role="tabpanel" aria-labelledby="cartao-tab">
+                            <p>Preencha os detalhes do cartão:</p>
+                            <div class="form-group">
+                                <label for="nomeTitular">Nome do Titular:</label>
+                                <input type="text" class="form-control" id="nomeTitular">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpfTitular">CPF do Titular:</label>
+                                <input type="text" class="form-control" id="cpfTitular">
+                            </div>
+                            <div class="form-group">
+                                <label for="numeroCartao">Número do Cartão:</label>
+                                <input type="text" class="form-control" id="numeroCartao">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvc">CVC:</label>
+                                <input type="text" class="form-control" id="cvc">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="cpfTitular">CPF do Titular:</label>
-                            <input type="text" class="form-control" id="cpfTitular">
+                        <div class="tab-pane fade" id="boleto" role="tabpanel" aria-labelledby="boleto-tab">
+                            <!-- Elemento de imagem para o boleto (URL de imagem predefinida) -->
+                            <img id="boletoImage" src="boleto.png" alt="Boleto Bancário" style="display: none">
+                            <button class="btn btn-primary mt-3" id="gerarBoletoBtn">Gerar Boleto</button>
                         </div>
-                        <div class="form-group">
-                            <label for="numeroCartao">Número do Cartão:</label>
-                            <input type="text" class="form-control" id="numeroCartao">
+                        <div class="tab-pane fade" id="qrcode" role="tabpanel" aria-labelledby="qrcode-tab">
+                            <!-- Elemento de imagem para o QR Code (URL de imagem predefinida) -->
+                            <img id="qrcodeImage" src="qrcode.png" alt="QR Code" style="display: none">
+                            <button class="btn btn-primary mt-3" id="gerarQRCodeBtn">Gerar QR Code</button>
                         </div>
-                        <div class="form-group">
-                            <label for="cvc">CVC:</label>
-                            <input type="text" class="form-control" id="cvc">
-                        </div>
-                    </div>
-                    <div id="boleto-qrcode-botoes" style="display: none;">
-                        <p>Escolha a forma de pagamento:</p>
-                        <button class="btn btn-primary" id="gerarBoletoBtn">Gerar Boleto</button>
-                        <button class="btn btn-primary" id="gerarQRCodeBtn">Gerar QR Code</button>
                     </div>
                 </div>
                 <div class="modal-footer">
