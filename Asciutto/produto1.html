@@ -7,19 +7,36 @@
     <link rel="stylesheet" href="styles.css">
     <title>Asciutto - Produto 1</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<body> 
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#">Asciutto</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="produtos.html">Produtos</a>
+                </li>
+            </ul>
+        </div>
     </nav>
+    
 
     <!-- Conteúdo da página de Produto 1 -->
     <section class="container my-5">
         <h1>Produto 1</h1>
 
-        <!-- Abas para Gerar Boleto e QR Code -->
+        <!-- Abas para Gerar Boleto, Cartão e QR Code -->
         <ul class="nav nav-tabs" id="productTabs" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="boleto-tab" data-toggle="tab" href="#boleto" role="tab" aria-controls="boleto" aria-selected="true">Gerar Boleto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="cartao-tab" data-toggle="tab" href="#cartao" role="tab" aria-controls="cartao" aria-selected="false">Pagamento em Cartão</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="qrcode-tab" data-toggle="tab" href="#qrcode" role="tab" aria-controls="qrcode" aria-selected="false">Gerar QR Code</a>
@@ -35,6 +52,20 @@
 
                 <!-- Botão para gerar boleto -->
                 <button id="gerarBoletoBtn" class="btn btn-primary">Gerar Boleto</button>
+            </div>
+
+            <!-- Conteúdo da aba de pagamento em Cartão -->
+            <div class="tab-pane fade" id="cartao" role="tabpanel" aria-labelledby="cartao-tab">
+                <!-- Adicione os campos de pagamento em Cartão aqui -->
+                <h2>Pagamento em Cartão</h2>
+                <label for="nomeTitular">Nome do Titular:</label>
+                <input type="text" id="nomeTitular" class="form-control">
+                <label for="cpfTitular">CPF do Titular:</label>
+                <input type="text" id="cpfTitular" class="form-control">
+                <label for="numeroCartao">Número do Cartão:</label>
+                <input type="text" id="numeroCartao" class="form-control">
+                <label for="cvc">CVC:</label>
+                <input type="text" id="cvc" class="form-control">
             </div>
 
             <!-- Conteúdo da aba de gerar QR code -->
@@ -70,8 +101,8 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

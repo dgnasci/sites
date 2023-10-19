@@ -2,31 +2,31 @@ document.addEventListener("DOMContentLoaded", function() {
     // Lógica para o botão "Gerar Boleto"
     const gerarBoletoBtn = document.getElementById("gerarBoletoBtn");
     gerarBoletoBtn.addEventListener("click", function() {
-        // Troca a imagem do boleto
+        // Troca a imagem do boleto e exibe a frase
         const boletoImage = document.getElementById("boletoImage");
         boletoImage.src = "boleto.jpg";
-
-        // Oculta a frase
         const boletoPhrase = document.getElementById("boletoPhrase");
-        boletoPhrase.style.display = "none";
-
-        // Oculta o botão de gerar boleto
-        gerarBoletoBtn.style.display = "none";
+        boletoPhrase.textContent = "Vencimento em 1 dia útil. A data de entrega pode ser alterada devido ao tempo de processamento do Boleto.";
     });
 
     // Lógica para o botão "Gerar QR Code"
     const gerarQRCodeBtn = document.getElementById("gerarQRCodeBtn");
     gerarQRCodeBtn.addEventListener("click", function() {
-        // Troca a imagem do QR code
+        // Troca a imagem do QR code e exibe a frase
         const qrcodeImage = document.getElementById("qrcodeImage");
         qrcodeImage.src = "qrcode.jpg";
-
-        // Oculta a frase
         const qrcodePhrase = document.getElementById("qrcodePhrase");
-        qrcodePhrase.style.display = "none";
+        qrcodePhrase.textContent = "O código Pix gerado para o pagamento é válido por 30 minutos após a finalização do pedido.";
+    });
 
-        // Oculta o botão de gerar QR Code
-        gerarQRCodeBtn.style.display = "none";
+    // Lógica para mostrar/ocultar a aba de pagamento em Cartão
+    const cartaoTab = document.getElementById("cartao-tab");
+    const cartaoContent = document.getElementById("cartao");
+    cartaoTab.addEventListener("click", function() {
+        // Certifique-se de que o conteúdo da aba de pagamento em Cartão seja mostrado ao clicar na aba
+        if (!cartaoContent.classList.contains("show")) {
+            cartaoContent.classList.add("show");
+        }
     });
 
     // Lógica para o botão "Finalizar Compra"
