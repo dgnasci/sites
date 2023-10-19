@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Lógica para o botão "Gerar Boleto"
     const gerarBoletoBtn = document.getElementById("gerarBoletoBtn");
-    gerarBoletoBtn.addEventListener("click", function() {boleto    // Lógica para o botão "Gerar Boleto"
-    const gerarBoletoBtn = document.getElementById("gerarBoletoBtn");
     gerarBoletoBtn.addEventListener("click", function() {
         // Oculta o QR Code, se estiver visível
         document.getElementById("qrcodeImage").style.display = "none";
@@ -47,10 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
         boletoImage.style.display = "block";
         alert("Boleto gerado com sucesso!");
     });
-
-    // Lógica para o botão "Gerar QR Code"
-    const gerarQRCodeBtn = document.getElementById("gerarQRCodeBtn");
-    gerarQRCodeBtn.addEventListener("click", function() {
   // Lógica para o botão "Gerar QR Code"
     const gerarQRCodeBtn = document.getElementById("gerarQRCodeBtn");
     gerarQRCodeBtn.addEventListener("click", function() {
