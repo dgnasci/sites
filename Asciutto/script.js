@@ -35,41 +35,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Lógica para o botão "Gerar Boleto"
     const gerarBoletoBtn = document.getElementById("gerarBoletoBtn");
-    gerarBoletoBtn.addEventListener("click", function() {
-          // Lógica para o botão "Gerar Boleto"
+    gerarBoletoBtn.addEventListener("click", function() {boleto    // Lógica para o botão "Gerar Boleto"
     const gerarBoletoBtn = document.getElementById("gerarBoletoBtn");
     gerarBoletoBtn.addEventListener("click", function() {
-        // Troca a imagem do boleto
+        // Oculta o QR Code, se estiver visível
+        document.getElementById("qrcodeImage").style.display = "none";
+
+        // Exibe o boleto
         const boletoImage = document.getElementById("boletoImage");
-        boletoImage.src = "boleto.jpg";
-
-        // Oculta a frase
-        const boletoPhrase = document.getElementById("boletoPhrase");
-        boletoPhrase.style.display = "none";
-
-        // Oculta o botão de gerar boleto
-        gerarBoletoBtn.style.display = "none";
-    
+        boletoImage.src = "link_para_boleto.png"; // Substitua pelo URL da imagem do boleto
+        boletoImage.style.display = "block";
         alert("Boleto gerado com sucesso!");
     });
 
     // Lógica para o botão "Gerar QR Code"
     const gerarQRCodeBtn = document.getElementById("gerarQRCodeBtn");
     gerarQRCodeBtn.addEventListener("click", function() {
-   // Lógica para o botão "Gerar QR Code"
+  // Lógica para o botão "Gerar QR Code"
     const gerarQRCodeBtn = document.getElementById("gerarQRCodeBtn");
     gerarQRCodeBtn.addEventListener("click", function() {
-        // Troca a imagem do QR code
+        // Oculta o boleto, se estiver visível
+        document.getElementById("boletoImage").style.display = "none";
+
+        // Exibe o QR Code
         const qrcodeImage = document.getElementById("qrcodeImage");
-        qrcodeImage.src = "qrcode.jpg";
-
-        // Oculta a frase
-        const qrcodePhrase = document.getElementById("qrcodePhrase");
-        qrcodePhrase.style.display = "none";
-
-        // Oculta o botão de gerar QR Code
-        gerarQRCodeBtn.style.display = "none";
-  
+        qrcodeImage.src = "link_para_qrcode.png"; // Substitua pelo URL da imagem do QR Code
+        qrcodeImage.style.display = "block";
         alert("QR Code gerado com sucesso!");
     });
 
