@@ -5,47 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Asciutto - Produto 1</title>
+    <title>Produto 1 - Asciutto</title>
 </head>
-<body> 
-   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Asciutto</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Página Inicial</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="produtos.html">Produtos</a>
-                </li>
-            </ul>
+<body>
+    <header class="bg-primary text-white py-3">
+        <nav class="container">
+            <a class="navbar-brand text-white" href="index.html">Asciutto</a>
+            <a class="text-white" href="produtos.html">Produtos</a>
+        </nav>
+    </header>
+
+    <section class="produto-detalhes bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="produto1.jpg" class="img-fluid" alt="Produto 1">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="mt-3">Produto 1</h1>
+                    <p class="mt-3">Descrição do Produto 1.</p>
+                    <h4 class="mt-3">R$ 49.99</h4>
+                    <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#modalCompra">Comprar</button>
+                </div>
+            </div>
         </div>
-    </nav>
-    
+    </section>
 
-    <!-- Conteúdo da página de Produto 1 -->
-    <section class="container my-5">
-        <h1>Produto 1</h1>
-
-        <!-- Abas para Gerar Boleto, Cartão e QR Code -->
-        <ul class="nav nav-tabs" id="productTabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="boleto-tab" data-toggle="tab" href="#boleto" role="tab" aria-controls="boleto" aria-selected="true">Gerar Boleto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="cartao-tab" data-toggle="tab" href="#cartao" role="tab" aria-controls="cartao" aria-selected="false">Pagamento em Cartão</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="qrcode-tab" data-toggle="tab" href="#qrcode" role="tab" aria-controls="qrcode" aria-selected="false">Gerar QR Code</a>
-            </li>
-        </ul>
-
-        <div class="tab-content" id="productTabContent">
-            <!-- Conteúdo da aba de gerar boleto -->
-            <div class="tab-pane fade show active" id="boleto" role="tabpanel" aria-labelledby="boleto-tab">
+    <!-- Modal de Compra -->
+    <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="modalCompraLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCompraLabel">Finalizar Compra</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Selecione a forma de pagamento:</p>
+                    <ul class="nav nav-tabs" id="formasPagamento" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="cartao-tab" data-toggle="tab" href="#cartao" role="tab" aria-controls="cartao" aria-selected="true">Cartão de Crédito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="boleto-tab" data-toggle="tab" href="#boleto" role="tab" aria-controls="boleto" aria-selected="false">Boleto Bancário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="qrcode-tab" data-toggle="tab" href="#qrcode" role="tab" aria-controls="qrcode" aria-selected="false">Pagamento via QR Code</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="formasPagamentoContent">
+                        <div class="tab-pane fade show active" id="cartao" role="tabpanel" aria-labelledby="cartao-tab">
+                            <p>Preencha os detalhes do cartão:</p>
+                            <div class="form-group">
+                                <label for="nomeTitular">Nome do Titular:</label>
+                                <input type="text" class="form-control" id="nomeTitular">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpfTitular">CPF do Titular:</label>
+                                <input type="text" class="form-control" id="cpfTitular">
+                            </div>
+                            <div class="form-group">
+                                <label for="numeroCartao">Número do Cartão:</label>
+                                <input type="text" class="form-control" id="numeroCartao">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvc">CVC:</label>
+                                <input type="text" class="form-control" id="cvc">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show active" id="boleto" role="tabpanel" aria-labelledby="boleto-tab">
                 <!-- Imagem inicial do boleto e a frase -->
                 <img id="boletoImage" src="imagemboleto.jpg" alt="Boleto" class="img-fluid">
                 <p id="boletoPhrase">Vencimento em 1 dia útil. A data de entrega pode ser alterada devido ao tempo de processamento do Boleto.</p>
@@ -53,50 +82,45 @@
                 <!-- Botão para gerar boleto -->
                 <button id="gerarBoletoBtn" class="btn btn-primary">Gerar Boleto</button>
             </div>
-
-            <!-- Conteúdo da aba de pagamento em Cartão -->
-            <div class="tab-pane fade" id="cartao" role="tabpanel" aria-labelledby="cartao-tab">
-                <!-- Adicione os campos de pagamento em Cartão aqui -->
-                <h2>Pagamento em Cartão</h2>
-                <label for="nomeTitular">Nome do Titular:</label>
-                <input type="text" id="nomeTitular" class="form-control">
-                <label for="cpfTitular">CPF do Titular:</label>
-                <input type="text" id="cpfTitular" class="form-control">
-                <label for="numeroCartao">Número do Cartão:</label>
-                <input type="text" id="numeroCartao" class="form-control">
-                <label for="cvc">CVC:</label>
-                <input type="text" id="cvc" class="form-control">
-            </div>
-
-            <!-- Conteúdo da aba de gerar QR code -->
-            <div class="tab-pane fade" id="qrcode" role="tabpanel" aria-labelledby="qrcode-tab">
+                           <div class="tab-pane fade" id="qrcode" role="tabpanel" aria-labelledby="qrcode-tab">
                 <!-- Imagem inicial do QR code e a frase -->
                 <img id="qrcodeImage" src="qrcodeimagem.jpg" alt="QR Code" class="img-fluid">
-                <p id="qrcodePhrase">O código Pix gerado para o pagamento é válido por 30 minutos após a finalização do pedido.</p>
+                <p id "qrcodePhrase">O código Pix gerado para o pagamento é válido por 30 minutos após a finalização do pedido.</p>
 
                 <!-- Botão para gerar QR code -->
                 <button id="gerarQRCodeBtn" class="btn btn-primary">Gerar QR Code</button>
+        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span id="valor-total-modal">Total: R$ 49.99</span>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="finalizarCompraBtn">Finalizar Compra</button>
+                </div>
             </div>
         </div>
-
-        <!-- Botão para finalizar a compra -->
-        <button id="finalizarCompraBtn" class="btn btn-success mt-4">Finalizar Compra</button>
-    </section>
-
-    <!-- Conteúdo do produto -->
-    <div class="container my-5">
-        <h2>Detalhes do Produto</h2>
-        <p>Descrição do Produto 1...</p>
     </div>
 
     <!-- Footer com informações de contato -->
-    <footer class="bg-dark text-light text-center py-4">
+    <footer class="bg-dark text-white py-4">
         <div class="container">
-            <p>Siga-nos nas redes sociais:</p>
-            <a href="#" class="text-light mr-3"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-light mr-3"><i class="far fa-envelope"></i></a>
-            <a href="#" class="text-light mr-3"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="text-light"><i class="fab fa-whatsapp"></i></a>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Contato</h4>
+                    <p>
+                        <i class="bi bi-instagram"></i> Seu Instagram<br>
+                        <i class="bi bi-envelope"></i> seu_email@example.com<br>
+                        <i class="bi bi-facebook"></i> Facebook: Sua Página<br>
+                        <i class="bi bi-whatsapp"></i> WhatsApp: (12) 3456-7890<br>
+                        <i class="bi bi-telephone"></i> 0800-123-4567
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <h4>Redes Sociais</h4>
+                    <a href="https://www.instagram.com/seu_instagram" class="btn btn-outline-light"><i class="bi bi-instagram"></i> Instagram</a>
+                    <a href="#" class="btn btn-outline-light"><i class="bi bi-facebook"></i> Facebook</a>
+                </div>
+            </div>
         </div>
     </footer>
 
